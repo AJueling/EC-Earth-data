@@ -7,7 +7,9 @@ writer = csv.writer(csv_file)
 writer.writerow(['mip_era','activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label','version','dcpp_start_year','time_range','nc_path'])
 
 for store in ['CMIP6', 'PRIMAVERA']:  # 46 & 12 secs, respectively
-    rootDir = f'/gws/nopw/j04/primavera2/stream1/{store}/HighResMIP/'
+    rootDir = f'/badc/cmip6/data/{store}/HighResMIP/'
+    print(store)
+    print(os.listdir(rootDir))
     for dirName, subdirList, fileList in tqdm(os.walk(rootDir)):
         if not any(fname.endswith('.nc') for fname in fileList):  continue
         os.path.normpath(dirName).split(os.path.sep)
