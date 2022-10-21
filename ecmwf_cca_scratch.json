@@ -1,8 +1,8 @@
 {
   "esmcat_version": "0.1.0",
-  "id": "ceda_nc_highresmip",
-  "description": "CEDA intake-esm catalog for netCDF object store for: HighResMIP",
-  "catalog_file": "ceda_nc_highresmip.csv",
+  "id": "ecmwf_cca_scratch",
+  "description": "ECMWF cca scratch intake-esm catalog for netCDF object store for: HighResMIP",
+  "catalog_file": "ecmwf_cca_scratch.csv",
   "attributes": [
     {
       "column_name": "mip_era",

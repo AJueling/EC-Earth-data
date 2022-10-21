@@ -6,8 +6,8 @@ csv_file = open("ecmwf_cca_scratch.csv", "w")
 writer = csv.writer(csv_file)
 writer.writerow(['mip_era','activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label','version','dcpp_start_year','time_range','nc_path'])
 
-for store in ['CMIP6', 'PRIMAVERA']:  # 46 & 12 secs, respectively
-    rootDir = f'/scratch/ms/nl/nm6/cmorised-results/EC-EARTH3P-HR-HighResMIP-highres-future/s2hh/CMIP6/HighResMIP/'
+for store in ['s2hh', 'xh2t']:  # 46 & 12 secs, respectively
+    rootDir = f'/scratch/ms/nl/nm6/cmorised-results/EC-EARTH3P-HR-HighResMIP-highres-future/{store}/CMIP6/HighResMIP/'
     print(store)
     print(os.listdir(rootDir))
     for dirName, subdirList, fileList in tqdm(os.walk(rootDir)):
